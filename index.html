@@ -3,19 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramen Rating App Project</title>
-    <script src="index.js"></script>
+    <title>Ramen Rater</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="ramen-menu"></div>
-    <form id="new-ramen">
-        <input type="text" id="name" placeholder="Ramen Name" required>
-        <input type="text" id="restaurant" placeholder="Restaurant" required>
-        <input type="text" id="image" placeholder="Image URL" required>
-        <input type="number" id="rating" min="1" max="5" placeholder="Rating" required>
-        <input type="text" id="comment" placeholder="Comment">
-        <button type="submit">Add Ramen</button>
-    </form>
-    
+    <header>
+        <h1>Ramen Rater</h1>
+    </header>
+    <div class="gallery" id="gallery">
+        <img src="https://via.placeholder.com/100?text=Ramen+1" alt="Ramen 1" data-name="Ramen 1" data-rating="8/10" data-comment="Pretty good!">
+        <img src="https://via.placeholder.com/100?text=Ramen+2" alt="Ramen 2" data-name="Ramen 2" data-rating="7/10" data-comment="Nice flavor">
+        <img src="https://via.placeholder.com/100?text=Ramen+3" alt="Ramen 3" data-name="Ramen 3" data-rating="9/10" data-comment="Highly recommend">
+        <img src="https://via.placeholder.com/100?text=Ramen+4" alt="Ramen 4" data-name="Ramen 4" data-rating="6/10" data-comment="Okay">
+    </div>
+    <div class="main-content">
+        <div class="ramen-detail" id="ramenDetail">
+            <img src="https://via.placeholder.com/200?text=Naruto+Ramen" alt="Naruto Ramen" id="detailImage">
+            <h2 id="detailName">Naruto Ramen</h2>
+            <p><strong>Rating:</strong> <span id="detailRating">10/10</span></p>
+            <p><strong>Comment:</strong> <span id="detailComment">My absolute favorite!</span></p>
+        </div>
+        <div class="add-ramen-form">
+            <h3>Add New Ramen</h3>
+            <form id="ramenForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" value="Taly" readonly><br>
+                <label for="restaurant">Restaurant:</label><br>
+                <input type="text" id="restaurant" value="Raffy’s" readonly><br>
+                <label for="comment">Comment:</label><br>
+                <input type="text" id="newComment"><br>
+                <button type="submit">Create</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
